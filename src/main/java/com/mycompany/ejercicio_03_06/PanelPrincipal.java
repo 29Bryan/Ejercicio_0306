@@ -15,33 +15,47 @@ import javax.swing.JPanel;
  *
  * @author PCG
  */
-public class PanelPrincipal extends JPanel implements MouseListener{
-    
-    
+public class PanelPrincipal extends JPanel implements MouseListener {
+
     private Color color1;
+    private int dibujo;
+    private int x;
+    private int y;
+    private Point punto = new Point(-100, -100);
 
-    private Point punto=new Point(-100,-100);
-
-    public PanelPrincipal(Color color1) {
-        this.color1 = color1;
+    public PanelPrincipal() {
 
         this.addMouseListener(this);
     }
 
+    public void dibujos(int dibujo, int x, int y, Color color1) {
+        this.dibujo = dibujo;
+        this.x = x;
+        this.y = y;
+        this.color1 = color1;
+    }
+
     @Override
     public void paint(Graphics g) {
-        super.paint(g);  
-//        g.setColor(this.color1);
-//        g.drawLine(0, 0, 600, 600);
-//        g.setColor(this.color1);
-//        g.fillOval(0, 0, 300, 300);
-        g.setColor(this.color1);
-        g.fillRect(this.punto.x-10, this.punto.y-10, 30, 20);
-//        g.setColor(this.color1);
-//        g.fillOval(this.punto.x-10, this.punto.y-10, 20, 20);
+        super.paint(g);
 
-        
-    }  
+        g.setColor(this.color1);
+        if (dibujo == 0) {
+            int[] xPoints = {x, x+20, x+80, x+30, x+50, x, x-50, x-30, x-80, x-20};
+            int[] yPoints = {y, y+70, y+70, y+110, y+180, y+140, y+180, y+110, y+70, y+70};
+            int nPuntos = y/2;
+            g.fillPolygon(xPoints, yPoints, nPuntos);
+        } else if (dibujo == 1) {
+            g.fillOval(this.punto.x - 10, this.punto.y - 10, x, y);
+        } else if (dibujo == 2) {
+            g.fillRect(this.punto.x - 10, this.punto.y - 10, x, y);
+        } else if (dibujo == 3) {
+            g.fillRect(this.punto.x - 10, this.punto.y - 10, x, y);
+        } else if (dibujo == 4) {
+
+        }
+
+    }
 
     public Color getColor1() {
         return color1;
@@ -66,7 +80,6 @@ public class PanelPrincipal extends JPanel implements MouseListener{
 //    public void setColor3(Color color3) {
 //        this.color3 = color3;
 //    }
-
     @Override
     public void mouseClicked(MouseEvent e) {
 //        System.out.println(e.toString());
@@ -97,7 +110,7 @@ public class PanelPrincipal extends JPanel implements MouseListener{
         System.out.println(e.getY());
         System.out.println(e.getPoint());
         System.out.println(e.getButton());
-        this.punto=e.getPoint();
+        this.punto = e.getPoint();
         this.repaint();
     }
 

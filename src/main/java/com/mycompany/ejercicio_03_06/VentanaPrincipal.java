@@ -12,6 +12,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JTextField;
+import javax.swing.text.JTextComponent;
 
 /**
  *
@@ -22,6 +24,7 @@ public final class VentanaPrincipal extends JFrame implements ActionListener{
     private PanelPrincipal panelPrincipal1;
     private JComboBox jComboBox1;
     private JComboBox jComboBox2;
+    private JTextField textComponent;
     private JButton jButton1;
     private JButton jButton2;
     
@@ -60,6 +63,8 @@ public final class VentanaPrincipal extends JFrame implements ActionListener{
         this.jButton1.addActionListener(this);
         this.jButton2 = new JButton("Eliminar");
         this.jButton2.addActionListener(this);
+        
+        this.textComponent = new JTextField(40);
     }
     
     @Override
