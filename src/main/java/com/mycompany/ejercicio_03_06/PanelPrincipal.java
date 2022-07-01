@@ -12,7 +12,6 @@ import java.awt.event.MouseListener;
 import javax.swing.JPanel;
 
 /**
- *
  * @author PCG
  */
 public class PanelPrincipal extends JPanel implements MouseListener {

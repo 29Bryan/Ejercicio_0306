@@ -220,8 +220,6 @@ public class Visualizador extends javax.swing.JFrame {
 
         }
         panelPrincipal.dibujos(jboxDibujo.getSelectedIndex(), Integer.valueOf(txtX.getText()), Integer.valueOf(txtY.getText()), c);
-
-
     }//GEN-LAST:event_butColorearActionPerformed
 
 
@@ -235,8 +233,7 @@ public class Visualizador extends javax.swing.JFrame {
 
     private void butEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butEliminarActionPerformed
        PanelPanel.removeAll();
-       PanelPanel.repaint();
-        
+       PanelPanel.repaint();      
     }//GEN-LAST:event_butEliminarActionPerformed
 
     /**
