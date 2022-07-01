@@ -41,8 +41,8 @@ public class PanelPrincipal extends JPanel implements MouseListener {
 
         g.setColor(this.color1);
         if (dibujo == 0) {
-            int[] xPoints = {x, x+20, x+80, x+30, x+50, x, x-50, x-30, x-80, x-20};
-            int[] yPoints = {y, y+70, y+70, y+110, y+180, y+140, y+180, y+110, y+70, y+70};
+            int[] xPoints = {x, x+10, x+40, x+15, x+25, x, x-25, x-15, x-40, x-10};
+            int[] yPoints = {y, y+35, y+35, y+55, y+90, y+70, y+90, y+55, y+35, y+35};
             int nPuntos = y/2;
             g.fillPolygon(xPoints, yPoints, nPuntos);
         } else if (dibujo == 1) {
@@ -52,7 +52,11 @@ public class PanelPrincipal extends JPanel implements MouseListener {
         } else if (dibujo == 3) {
             g.fillRect(this.punto.x - 10, this.punto.y - 10, x, y);
         } else if (dibujo == 4) {
-
+            int[] xPoints = {x, x+200, x-150};
+            int[] yPoints = {y, y+150, y+150};
+            int nPuntos = y/2;
+            g.fillPolygon(xPoints, yPoints, nPuntos);
+//            g.fillRoundRect(this.punto.x - 10, this.punto.y - 10, x, y, x, y);
         }
 
     }

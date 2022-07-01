@@ -234,7 +234,7 @@ public class Visualizador extends javax.swing.JFrame {
     }//GEN-LAST:event_txtYActionPerformed
 
     private void butEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butEliminarActionPerformed
-       PanelPanel.remove(panelPrincipal);
+       this.remove(this.panelPrincipal);
         
     }//GEN-LAST:event_butEliminarActionPerformed
 

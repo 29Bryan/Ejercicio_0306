@@ -40,7 +40,7 @@ public final class VentanaPrincipal extends JFrame implements ActionListener{
         this.add(this.jButton1,BorderLayout.SOUTH);
         this.add(this.jButton2,BorderLayout.WEST);
         
-        this.panelPrincipal1 = new PanelPrincipal(Color.WHITE);        
+//        this.panelPrincipal1 = new PanelPrincipal(Color.WHITE);        
         this.add(this.panelPrincipal1,BorderLayout.CENTER);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
