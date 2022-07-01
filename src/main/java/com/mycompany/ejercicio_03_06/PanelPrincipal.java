@@ -56,7 +56,6 @@ public class PanelPrincipal extends JPanel implements MouseListener {
             int[] yPoints = {y, y+150, y+150};
             int nPuntos = y/2;
             g.fillPolygon(xPoints, yPoints, nPuntos);
-//            g.fillRoundRect(this.punto.x - 10, this.punto.y - 10, x, y, x, y);
         }
 
     }
